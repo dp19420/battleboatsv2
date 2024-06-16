@@ -1,32 +1,32 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Battleboats Game
 
-Welcome,
+A simple Battleship game implemented in Python and deployed on Heroku.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
+### Features
 
-## Reminders
+- 10x10 grid for the game board
+- Random placement of 7 ships on the computer's grid
+- Input validation for row and column coordinates
+- Tracking of hit and miss shots on the player's grid
+- Countdown of remaining turns
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+### How to play
 
-## Creating the Heroku app
+1. The game will randomly place 7 ships on a 10x10 grid.
+2. Enter row and column numbers to fire shots.
+3. Try to sink all 7 ships before running out of turns.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+### Running the Game
 
-1. `heroku/python`
-2. `heroku/nodejs`
+The Game is deployd on Heroku at:["Heroku"](https://dashboard.heroku.com/apps/battleboat/deploy/github)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Code
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+The code for the game is contained in the game.py file, which is deployed on Heroku.
 
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+- target_grid and aim_grid represent the computer's and player's grids.
+- print_grid(grid) prints the given grid.
+- place_ships(grid) randomly places ships on the grid.
+- place_shot() prompts the user for row and column coordinates.
+- sunk_ships(grid) counts the number of ships on the grid.
+The main loop runs until the player wins or loses.
