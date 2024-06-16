@@ -1,11 +1,11 @@
-## Battleboats Game
+## Battledingy Game
 
 A simple Battleship game implemented in Python and deployed on Heroku.
 
 ### Features
 
 - 10x10 grid for the game board
-- Random placement of 7 ships on the computer's grid
+- Random placement of 7 single location ships on the computer's grid
 - Input validation for row and column coordinates
 - Tracking of hit and miss shots on the player's grid
 - Countdown of remaining turns
@@ -22,7 +22,7 @@ The Game is deployd on Heroku at:["Heroku"](https://dashboard.heroku.com/apps/ba
 
 ### Code
 
-The code for the game is contained in the game.py file, which is deployed on Heroku.
+The code for the game is contained in the run.py file, which is deployed on Heroku.
 
 - target_grid and aim_grid represent the computer's and player's grids.
 - print_grid(grid) prints the given grid.
