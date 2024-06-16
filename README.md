@@ -1,6 +1,6 @@
 ## Battledingy Game
 
-A simple Battleship game implemented in Python and deployed on Heroku.
+A simple Battledingy( small ships with no ability to fire back, pirates with small arms in speedboats basicly) game implemented in Python and deployed on Heroku.
 
 ### Features
 
@@ -30,3 +30,27 @@ The code for the game is contained in the run.py file, which is deployed on Hero
 - place_shot() prompts the user for row and column coordinates.
 - sunk_ships(grid) counts the number of ships on the grid.
 The main loop runs until the player wins or loses.
+
+### Testing
+
+- Have run it through a PEP8 validator
+- Tried wrong input (both strings and to high numbers)
+- Tested in gitpd terminal and Heroku
+
+#### Validator result
+ - PEP8
+     - No warnings
+
+
+### Deployment
+
+Deployed to Heroku
+
+### Further plans
+
+- Currently this is a offensive game and i wish to add the abbility for the computer to fire back and for the player to place his own ships.
+- Size settings for the grid currently abandond becouse i could not figure out a clean way of doing it in time. Might work more on that later.  
+
+### Credits
+
+- Love sandwiches walktrough, without that i would still not have been anywhere.
