@@ -1,10 +1,11 @@
 from random import randint
 
-target_grid = [[' '] * 10 for x in range(10)] 
+target_grid = [[' '] * 10 for x in range(10)]
 
-aim_grid =[[' '] * 10 for x in range(10)]
+aim_grid = [[' '] * 10 for x in range(10)]
 
-#Creates the 10 by 10 grid
+
+# Creates the 10 by 10 grid
 def print_grid(grid):
     print('  1 2 3 4 5 6 7 8 9 10')
     print('  --------------------')
@@ -12,28 +13,31 @@ def print_grid(grid):
     for row in grid:
         print("%d|%s|" % (row_num, "|".join(row)))
         row_num += 1
-#CPU opponent random place 7 ships on grid
+
+
+# CPU opponent random place 7 ships on grid
 def place_ships(grid):
     for ship in range(7):
-        ship_row, ship_column = randint(0,9), randint(0,9)
-        while grid[ship_row] [ship_column] == 'X':
-            ship_row, ship_location = randint(0,9), randint(0,9)
-        grid[ship_row] [ship_column] ='X'
+        ship_row, ship_column = randint(0, 9), randint(0, 9)
+        while grid[ship_row][ship_column] == 'X':
+            ship_row, ship_location = randint(0, 9), randint(0, 9)
+        grid[ship_row][ship_column] = 'X'
 
-#register location fired upon
+
+# register location fired upon
 def place_shot():
-    row = input("Enter a Number 1-10 for the vertical coordinate: \n ")
+    row = input("Enter a Number 1-10 for the vertical coordinate:\n")
     while not (row.isdigit() and (1 <= int(row) <= 10)):
         print("Invalid input. Please enter a number between 1 and 10.")
-        row = input("Enter a Number 1-10 for the vertical coordinate: \n ")
-    column = input("Enter a Number 1-10 for the horizontal coordinate: \n ")
+        row = input("Enter a Number 1-10 for the vertical coordinate:\n")
+    column = input("Enter a Number 1-10 for the horizontal coordinate:\n")
     while not (column.isdigit() and (1 <= int(column) <= 10)):
         print("Invalid input. Please enter a number between 1 and 10.")
-        column = input("Enter a Number 1-10 for the horizontal coordinate: \n ")
+        column = input("Enter a Number 1-10 for the horizontal coordinate:\n")
     return int(row) - 1, int(column) - 1
-    
 
-#counter for hit ships
+
+# counter for hit ships
 def sunk_ships(grid):
     sunk = 0
     for row in grid:
@@ -42,7 +46,8 @@ def sunk_ships(grid):
                 sunk += 1
     return sunk
 
-#Runs the Game
+
+# Runs the Game
 place_ships(target_grid)
 turns = 15
 while turns > 0:
